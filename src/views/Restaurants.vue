@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="restaurants">
     <h1>{{ message }}</h1>
   </div>
 </template>
@@ -11,7 +11,7 @@
 export default {
   data: function() {
     return {
-      message: "Welcome!"
+      message: "Find a restaurant near you!"
     };
   },
   created: function() {},

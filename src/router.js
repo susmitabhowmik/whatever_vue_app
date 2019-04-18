@@ -1,8 +1,9 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Home from './views/Home.vue'
+import Vue from 'vue';
+import Router from 'vue-router';
+import Home from './views/Home.vue';
+import Restaurants from './views/Restaurants.vue';
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   mode: 'history',
@@ -13,6 +14,11 @@ export default new Router({
       name: 'home',
       component: Home
     },
+     {
+      path: '/restaurants',
+      name: 'restaurants',
+      component: Restaurants
+    },
     {
       path: '/about',
       name: 'about',
@@ -22,4 +28,4 @@ export default new Router({
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
     }
   ]
-})
+});
