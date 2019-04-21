@@ -1,6 +1,14 @@
 <template>
   <div class="restaurants">
     <h1>{{ message }}</h1>
+    <p>Please enter your address: <input type="text" v-model="address" /></p>
+    <p>Please enter a radius: <input type="text" v-model="radius" /></p>
+    <p>Please enter a cusine: <input type="text" v-model="cuisine" /></p>
+    <button v-on:click="addParams()">Add parameters </button>
+    <p>Name: {{restaurant.name}}</p>
+    <p>Address: {{restaurant.address}}</p>
+
+
   </div>
 </template>
 
@@ -8,13 +16,25 @@
 </style>
 
 <script>
+import axios from "axios";
+
 export default {
   data: function() {
     return {
-      message: "Find a restaurant near you!"
+      message: "Find a restaurant near you!",
+      restaurant: [],
     };
   },
-  created: function() {},
-  methods: {}
+  created: function() {
+  },
+  methods: {
+    addParams: function() {
+      console.log('retrieving data...');
+      axios.get("/api/restaurants?address=" + this.address + "&keyword=" + this.cuisine + "&distance=" + this.radius*1609.34).then(response => {
+        console.log(response);
+        this.restaurant = response.data;
+      });
+    }
+  }
 };
 </script>
