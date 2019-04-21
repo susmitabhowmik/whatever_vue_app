@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/Home.vue';
 import Restaurants from './views/Restaurants.vue';
+import majorEvents from './views/majorEvents.vue';
 
 Vue.use(Router);
 
@@ -18,6 +19,11 @@ export default new Router({
       path: '/restaurants',
       name: 'restaurants',
       component: Restaurants
+    },
+    {
+      path: '/majorEvents',
+      name: 'majorEvents',
+      component: majorEvents
     },
     {
       path: '/about',

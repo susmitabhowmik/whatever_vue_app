@@ -4,7 +4,8 @@
     <p>Please enter your address: <input type="text" v-model="address" /></p>
     <p>Please enter a radius: <input type="text" v-model="radius" /></p>
     <p>Please enter a cusine: <input type="text" v-model="cuisine" /></p>
-    <button v-on:click="addParams()">Add parameters </button>
+<!--     <button v-on:clcick ="toggleParams()">Refine Search</button> 
+ -->    <p><button v-on:click="addParams()"> Go! </button></p>
     <p>Name: {{restaurant.name}}</p>
     <p>Address: {{restaurant.address}}</p>
 
@@ -30,7 +31,7 @@ export default {
   methods: {
     addParams: function() {
       console.log('retrieving data...');
-      axios.get("/api/restaurants?address=" + this.address + "&keyword=" + this.cuisine + "&distance=" + this.radius*1609.34).then(response => {
+      axios.get("/api/restaurants?address=" + this.address + "&keyword=" + this.cuisine + "&distance=" + this.radius * 1609.34).then(response => {
         console.log(response);
         this.restaurant = response.data;
       });
