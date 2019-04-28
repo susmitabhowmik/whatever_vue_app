@@ -1,33 +1,35 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/restaurants">Restaurants</router-link> |
-      <router-link to="/localEvents">Local Events</router-link> |
-      <router-link to="/majorEvents">Major Events</router-link>
-    </div>
-    <router-view/>
+     <header class="b-header clearfix">
+        <a href="/home" class="logo"><span>Whatever</span> </a>
+        <a class="weather" href="#"> <img width="35" height="35" src="img/rain-xxl.png" alt="Weather"> <span>+ 24° C</span> </a>
+        <div class="b-header__ctrl">
+            <div class="b-header__ctrl__item"> </div>
+            <div class="b-header__ctrl__item">
+                <a href="#" class="ab-item login jquery_popup"> <i class="fa fa-unlock-alt" aria-hidden="true"></i><span>My Account</span>
+                </a>
+            </div>
+        </div>
+        <div class="b-nav-toggle closed"> WHATEVER <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </div>
+        <nav class="b-nav fadein">
+            <ul>
+                <li class="menu-item-has-children">
+                    <a href="/restaurants"> Restaurants <i class="fa fa-map-marker" aria-hidden="true"></i> </a>
+                </li>
+                <li class="menu-item-has-children"> <a href="/localEvents">Local Events <i class="fa fa-star-o" aria-hidden="true"></i></a>
+                </li>
+                <li class="menu-item-has-children"> <a href="/majorEvents">Major Events <i class="fa fa-star-o" aria-hidden="true"></i></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+     <router-view/>
+
+
   </div>
 </template>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>

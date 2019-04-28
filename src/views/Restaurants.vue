@@ -8,7 +8,7 @@
  -->    <p><button v-on:click="addParams()"> Go! </button></p>
     <p>Name: {{restaurant.name}}</p>
     <p>Address: {{restaurant.address}}</p>
-  <p><iframe id="map" width="80%" height="500px" v-bind:src="src()"></iframe></p>
+  <p><iframe id="map" width="100%" height="500px" v-bind:src="src()"></iframe></p>
 
   </div>
 </template>

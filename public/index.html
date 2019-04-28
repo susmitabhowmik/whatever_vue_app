@@ -1,17 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
+<!doctype html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title>whatever_vue_app</title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but whatever_vue_app doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
+    <title>Whatever</title>
+    <meta name="description" content="">
+    <!-- <meta http-equiv="Cache-Control" content="public"> -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- server -->
+<!--     <script>
+        String.prototype.replaceAll = function(search, replacement) {
+            var target = this;
+            return target.split(search).join(replacement);
+        };
+
+        if (window.XMLHttpRequest) {
+            xhr = new XMLHttpRequest();
+        } else {
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xhr.open("GET", 'css/main.css', false);
+        xhr.send();
+        var lazyStyle = document.createElement('style');
+        lazyStyle.innerHTML = xhr.responseText.replaceAll('../', './');
+        document.head.appendChild(lazyStyle);
+    </script> -->
+    <link rel="stylesheet" href="css/main.css">
+    <!--[if lt IE 9]>
+    <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="homepage">
     <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/dropzone.js"></script>
+        <script src="js/chosen.jquery.min.js"></script>
+        <script src="js/ion.rangeSlider.min.js"></script>
+        <script src="js/jquery.popup.min.js"></script>
+        <script src="js/jssor.slider.mini.js"></script>
+        <script src="js/lightcase.js"></script>
+        <script src="js/imagesloaded.pkgd.min.js"></script>
+        <script src="js/masonry.pkgd.min.js"></script>
+        <script src="js/owl.carousel.js"></script>
+        <script src="js/tabs.js"></script>
+        <script src="js/tooltip.js"></script>
+        <script src="js/compiled_lib.js"></script>
+        <script src="js/custum.js"></script>
+        <script src="js/jquery.custom-scrollbar.js"></script>
+        <script src="js/main.js">
+    </script>
+</body>
 </html>

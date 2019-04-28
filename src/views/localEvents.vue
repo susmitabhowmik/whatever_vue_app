@@ -15,7 +15,7 @@
     <p>Venue: {{localEvent.venue}}</p>
     <p>URL: {{localEvent.url}}</p>
 
-   <p><iframe id="map" width="80%" height="500px" v-bind:src="src()"></iframe></p>
+   <p><iframe id="map" width="100%" height="500px" v-bind:src="src()"></iframe></p>
   </div>
 
 </template>
