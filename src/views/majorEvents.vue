@@ -14,9 +14,7 @@
     <p>Venue: {{majorEvent.venue}}</p>
     <p>Price Range: {{majorEvent.priceRange}}</p>
     <p>URL: {{majorEvent.url}}</p>
-
-
-
+    <p><iframe id="map" width="80%" height="500px" v-bind:src="src()"></iframe></p>
   </div>
 </template>
 
@@ -31,6 +29,7 @@ export default {
     return {
       message: "Find a major event near you!",
       majorEvent: [],
+      url: `http://www.google.com/maps/embed/v1/directions?key=${process.env.VUE_APP_GOOGLE_API_KEY}`
     };
   },
   created: function() {
@@ -42,6 +41,9 @@ export default {
         console.log(response);
         this.majorEvent = response.data;
       });
+    },
+    src: function() { 
+      return this.url + "&origin=" + this.address + "&destination=" + this.majorEvent.venue;
     }
   }
 };
