@@ -14,9 +14,9 @@
     <p>End Time: {{localEvent.end_time}}</p>
     <p>Venue: {{localEvent.venue}}</p>
     <p>URL: {{localEvent.url}}</p>
-  </div>
 
- 
+   <p><iframe id="map" width="80%" height="500px" v-bind:src="src()"></iframe></p>
+  </div>
 
 </template>
 
@@ -31,6 +31,7 @@ export default {
     return {
       message: "Find a local event near you!",
       localEvent: [],
+      url: `http://www.google.com/maps/embed/v1/directions?key=${process.env.VUE_APP_GOOGLE_API_KEY}`
     };
   },
   created: function() {
@@ -42,6 +43,9 @@ export default {
         console.log(response);
         this.localEvent = response.data;
       });
+    },
+    src: function() { 
+      return this.url + "&origin=" + this.address + "&destination=" + this.localEvent.venue;
     }
   }
 };
