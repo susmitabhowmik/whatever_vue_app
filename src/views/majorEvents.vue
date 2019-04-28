@@ -2,7 +2,7 @@
   <div class="restaurants">
     <h1>{{ message }}</h1>
     <p>Please enter your address: <input type="text" v-model="address" /></p>
-    <p>Please enter a radius: <input type="text" v-model="radius" /></p>
+    <p>Please enter a radius (miles): <input type="text" v-model="radius" /></p>
     <p>Please enter a start date: <input type="dateTime-local" v-model="start_date" /></p>
     <p>Please enter an end date: <input type="dateTime-local" v-model="end_date" /></p>
 
