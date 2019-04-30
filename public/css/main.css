@@ -4058,13 +4058,15 @@ html .btn--buy-ticket:hover {
 /* ---------------------------------------------------- Footer style ---------------------------------------------------- */
 
 .b-footer {
-    background: url(../img/footer.png) center no-repeat;
-    position: absolute;
-    bottom: 0;
+    background: url(../img/footer.png) center top no-repeat;
+    padding-top: 128px;
+    margin-top: -132px;
+    position: relative;
     display: block;
 }
 .b-footer__info {
-  padding-top: 1000px;
+    background: #0f0f11;
+    padding-top: 60px;
 }
 .b-footer__text {
     margin-bottom: 30px;
