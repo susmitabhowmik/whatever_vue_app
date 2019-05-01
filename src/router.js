@@ -6,6 +6,7 @@ import majorEvents from './views/majorEvents.vue';
 import localEvents from './views/localEvents';
 import maps from './views/Maps';
 import Signup from './views/Signup.vue';
+import Login from './views/Login.vue';
 
 Vue.use(Router);
 
@@ -47,6 +48,11 @@ export default new Router({
       path: '/signup',
       name: 'signup',
       component: Signup
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: Login
     }
   ]
 });

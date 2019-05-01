@@ -13,10 +13,10 @@
              <div class="b-header__ctrl__item"> 
                 <a href="/majorEvents" class="ab-item login "> <i class="fa fa-star-o" aria-hidden="true"></i><span>Major Events</span>
                 </a></div>
-           <!--  <div class="b-header__ctrl__item">
-                <a href="#" class="ab-item login jquery_popup"> <i class="fa fa-unlock-alt" aria-hidden="true"></i><span>My Account</span>
+            <div class="b-header__ctrl__item">
+                <a href="/login" class="ab-item login"> <i class="fa fa-unlock-alt" aria-hidden="true"></i><span>My Account</span>
                 </a>
-            </div> -->
+            </div>
         </div>
         <div class="b-nav-toggle closed"> WHATEVER 
         </div>
