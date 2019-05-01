@@ -5,6 +5,7 @@ import Restaurants from './views/Restaurants.vue';
 import majorEvents from './views/majorEvents.vue';
 import localEvents from './views/localEvents';
 import maps from './views/Maps';
+import Signup from './views/Signup.vue';
 
 Vue.use(Router);
 
@@ -17,7 +18,7 @@ export default new Router({
       name: 'home',
       component: Home
     },
-     {
+    {
       path: '/home',
       name: 'home',
       component: Home
@@ -41,6 +42,11 @@ export default new Router({
       path: '/Maps',
       name: 'Maps',
       component: maps
+    },
+    {
+      path: '/signup',
+      name: 'signup',
+      component: Signup
     }
   ]
 });
