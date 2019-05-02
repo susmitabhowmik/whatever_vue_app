@@ -19292,3 +19292,6 @@ div.popup {
     padding: 20px;
     box-shadow: 0 3px 10px #222
 }
+.restaurants, .localEvents, .majorEvents {
+    color: black;
+}

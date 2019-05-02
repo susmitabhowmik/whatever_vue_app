@@ -1,5 +1,5 @@
 <template>
-  <div class="restaurants">
+  <div class="majorEvents b-promo__sub-title">
     <h1>{{ message }}</h1>
     <p>Please enter your address: <input type="text" v-model="address" /></p>
     <p>Please enter a radius (miles): <input type="text" v-model="radius" /></p>
@@ -9,10 +9,12 @@
 <!--     <button v-on:clcick ="toggleParams()">Refine Search</button> 
  -->    <p><button v-on:click="addParams()"> Go! </button></p>
     <p>Name: {{majorEvent.name}}</p>
-    <p>Date/Time {{majorEvent.dateTime}}</p>
+    <p>Date {{majorEvent.localDate}}</p>
+    <p>Time {{majorEvent.localTime}}</p>
     <p>Address: {{majorEvent.address}}</p>
     <p>Venue: {{majorEvent.venue}}</p>
-    <p>Price Range: {{majorEvent.priceRange}}</p>
+    <p>Minimum Price: ${{majorEvent.minPrice}}</p>
+    <p>Maximum Price: ${{majorEvent.maxPrice}}</p>
     <p>URL: {{majorEvent.url}}</p>
     <p><iframe id="map" width="100%" height="500px" v-bind:src="src()"></iframe></p>
   </div>
