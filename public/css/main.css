@@ -19295,3 +19295,17 @@ div.popup {
 .restaurants, .localEvents, .majorEvents {
     color: black;
 }
+
+.fa-m:before {
+    font-family: Arial; /* your font family here! */
+    font-weight: bold;
+    content: 'M';
+    font-size:14;
+}
+
+.fa-l:before {
+    font-family: Arial; /* your font family here! */
+    font-weight: bold;
+    content: 'L';
+    font-size:14;
+}

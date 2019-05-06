@@ -12,12 +12,12 @@
   <p><button v-on:click="addParams()"> Go! </button></p>
   <p>Name: {{restaurant.name}}</p>
   <p>Address: {{restaurant.address}}</p>
-  <p><iframe id="map" width="100%" height="500px" v-bind:src="src()"></iframe></p>
-
+<iframe id="map" width="100%" height="500px" text-align:left v-bind:src="src()"></iframe>
   </div>
 </template>
 
 <style>
+
 </style>
 
 <script>
@@ -43,7 +43,7 @@ export default {
     },
     src: function() { 
       return this.url + "&origin=" + this.address + "&destination=" + this.restaurant.address;
-    }
+    },
   }
 };
 </script>

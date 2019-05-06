@@ -4,14 +4,14 @@
         <a href="/home" class="logo"><span>Whatever</span> </a>
    <div class="b-header__ctrl">
             <div class="b-header__ctrl__item"> 
-                <a href="/restaurants" class="ab-item login "> <i class="fa fa-map-marker" aria-hidden="true"></i><span>Restaurants</span>
+                <a href="/restaurants" class="ab-item login "> <i class="fa fa-glass" aria-hidden="true"></i><span>Restaurants</span>
                 </a></div>
              <div class="b-header__ctrl__item"> 
-                <a href="/localEvents" class="ab-item login "> <i class="fa fa-star-o" aria-hidden="true"></i><span>Local Events</span>
+                <a href="/localEvents" class="ab-item login "> <i class="fa fa-l" aria-hidden="true"></i><span>Local Events</span>
                 </a></div>
 
              <div class="b-header__ctrl__item"> 
-                <a href="/majorEvents" class="ab-item login "> <i class="fa fa-star-o" aria-hidden="true"></i><span>Major Events</span>
+                <a href="/majorEvents" class="ab-item login "> <i class="fa fa-m" aria-hidden="true"></i><span>Major Events</span>
                 </a></div>
             <div class="b-header__ctrl__item">
                 <a href="/login" class="ab-item login jquery_popup"> <i class="fa fa-unlock-alt" aria-hidden="true"></i><span>Login</span>

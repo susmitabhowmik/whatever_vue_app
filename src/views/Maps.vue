@@ -1,27 +1,26 @@
 <template>
-  <div id="maps">
-  <p>From: <input type="text" v-model.lazy = "origin"></p>
-  <p>To: <input type="text" v-model.lazy="destination"></p>
-  <p><iframe width="80%" height="500px" v-bind:src="src()"></iframe></p>
-</div>
+ <div id='map' style='width: 100%; height: 500px; background-color: black'></div>
 </template>
 
-import axios from "axios";
-<script type="text/javascript">
+<style>
+#map { position:relative; top:0; bottom:0; width:100%; }
+</style>
+
+<script>
+import axios from 'axios';
 export default {
-  data: function() {
-    const api_key = process.env.VUE_APP_GOOGLE_API_KEY;
-    return {
-      origin: "Empire State Building",
-      destination: "Freedom Tower",
-      url: `http://www.google.com/maps/embed/v1/directions?key=${api_key}`
-    };
-  },
-  created: function() {},
-  methods: {
-    src: function() {
-      return this.url + "&origin=" + this.origin + "&destination=" + this.destination;
-    }
+  mounted: function() {
+    mapboxgl.accessToken = `${process.env.VUE_APP_MAPBOX_ACCESS_TOKEN}`;
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v11',
+      center: [-79.4512, 43.6568],
+      zoom: 13
+    });
+       
+    map.addControl(new MapboxDirections({
+      accessToken: mapboxgl.accessToken
+    }), 'top-left');
   }
 };
 </script>
