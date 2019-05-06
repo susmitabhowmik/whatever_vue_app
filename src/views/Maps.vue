@@ -1,6 +1,6 @@
 <template>
-  <div>
- <div id='map'></div>
+<div >
+ <div id= 'mapbox'></div>
  <div id='instructions'></div>
 </div>
 </template>
@@ -11,13 +11,15 @@
    padding: 0;
  }
     
- #map {
+ #mapbox{
    position: absolute;
    top: 0; 
    bottom: 0; 
    width: 100%;
+   height: 500px;
  }
  #instructions {
+  height: 400px;
   position: relative;
   margin: 20px;
   width: 25%;
@@ -42,7 +44,7 @@ export default {
   mounted: function() {
     mapboxgl.accessToken = `${process.env.VUE_APP_MAPBOX_ACCESS_TOKEN}`;
     var map = new mapboxgl.Map({
-      container: 'map', // container id
+      container: 'mapbox', // container id
       style: 'mapbox://styles/mapbox/streets-v11', //stylesheet location
       center: [-122.662323,45.523751], // starting position
       zoom: 12, // starting zoom
@@ -62,7 +64,7 @@ export default {
     // create a function to make a directions request
     function getRoute(end) {
       // make directions request using cycling profile
-      var url = 'https://api.mapbox.com/directions/v5/mapbox/cycling/' + start[0] + ',' + start[1] + ';' + end[0] + ',' + end[1] + '?steps=true&geometries=geojson&access_token=' + mapboxgl.accessToken;
+      var url = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + start[0] + ',' + start[1] + ';' + end[0] + ',' + end[1] + '?steps=true&geometries=geojson&access_token=' + mapboxgl.accessToken;
 
       // make an XHR request https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
       var req = new XMLHttpRequest();
@@ -118,7 +120,7 @@ export default {
         var tripInstructions = [];
         for (var i = 0; i < steps.length; i++) {
           tripInstructions.push('<br><li>' + steps[i].maneuver.instruction) + '  </li>';
-          instructions.innerHTML = '<br><span class="duration">Trip duration: ' + Math.floor(data.duration/60) + ' min 🚴 </span>' + tripInstructions;
+          instructions.innerHTML = '<br><span class="duration">Trip duration: ' + Math.floor(data.duration/60) + ' min 🚗 </span>' + tripInstructions;
         };
       };
       req.send();
