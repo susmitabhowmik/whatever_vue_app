@@ -17,7 +17,6 @@
     </div> 
     <div class="col-md-6"> <div class="b-slide-menu__form__row__item"><input type="text" placeholder="Cuisine" v-model="cuisine" /></div></div> </div>
     
-    <div id="toggle">
       <div class="b-slide-menu__form__row row">
       <div class="col-md-3"><span class="b-slide-menu__form__row__title"><h4>Minimum price (optional):</h4></span>
       </div> 
@@ -43,11 +42,8 @@
         <option value="3">💲💲💲</option>
         <option value="4">💲💲💲💲</option>
       </select>
-
-
       </div></div></div>
 
-  </div></div></template>
 <!--     <button v-on:clcick ="toggleParams()">Refine Search</button> 
     
   <p>Please enter a minimum price: <input type="text" v-model="minprice" /></p>
@@ -64,7 +60,8 @@
 <!-- </iframe>
  --> 
     <div id='map' style='width: 100%; height: 500px;'></div> 
-  </div>
+    </div>
+
 </template>
 
 <style>
