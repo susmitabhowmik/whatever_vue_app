@@ -1,23 +1,38 @@
 <template>
-  <div class="localEvents b-promo__sub-title">
+  <div class="localEvents">
     <h1>{{ message }}</h1>
-    <p>Please enter your address: <input type="text" v-model="address" /></p>
-    <p>Please enter a radius (miles): <input type="text" v-model="radius" /></p>
-    <div class="slidecontainer">
-     <p>Please enter a start date: <input type="dateTime-local" v-model="start_date" /></p>
+    
+    <div class="b-slide-menu__form__row row">
+    <div class="col-md-3"><span class="b-slide-menu__form__row__title"><h4>Address:</h4></span>
     </div>
-    <p>Please enter an end date: <input type="dateTime-local" v-model="end_date" /></p>
+    <div class="col-md-6"> <div class="b-slide-menu__form__row__item"> <input type="text" placeholder="Address" v-model="address" /></div></div></div>    
+    <div class="b-slide-menu__form__row row">
+    <div class="col-md-3"><span class="b-slide-menu__form__row__title"><h4>Radius (miles):</h4></span>
+    </div> 
+    <div class="col-md-6"> <div class="b-slide-menu__form__row__item"><input type="text" v-model="radius" placeholder="Radius" /></div></div></div>
+
+    <div class="b-slide-menu__form__row row">
+    <div class="col-md-3"><span class="b-slide-menu__form__row__title"><h4>Start date:</h4></span></div>
+    <div class="col-md-6"> <div class="b-slide-menu__form__row__item" style="text-align: center;"><input type="dateTime-local" v-model="start_date" /></div></div></div>
+
+      <div class="b-slide-menu__form__row row">
+      <div class="col-md-3"><span class="b-slide-menu__form__row__title"><h4>
+      End date:</h4></span></div>
+      <div class="col-md-6"> <div class="b-slide-menu__form__row__item" style="text-align: center;"><input type="dateTime-local" v-model="end_date" /></div></div></div>
 
 <!--     <button v-on:clcick ="toggleParams()">Refine Search</button> 
- -->    <p><button v-on:click="addParams()"> Go! </button></p>
-    <p>Name: {{localEvent.event_name}}</p>
-    <p>Description: {{localEvent.description}}</p>
-    <p>Start Time: {{localEvent.start_time}}</p>
-    <p>End Time: {{localEvent.end_time}}</p>
-    <p>Venue: {{localEvent.venue}}</p>
-    <p>URL: {{localEvent.url}}</p>
+ --><p><button class="btn btn--black" v-on:click="addParams()"> Go! </button></p>
+    <h3><div class="outputTitle">Name</div> {{localEvent.event_name}}</h3>
+    <h3><div class="outputTitle">Description</div> {{localEvent.description}}</h3>
+    <h3><div class="outputTitle">Start Time</div> {{localEvent.start_time}}</h3>
+    <h3><div class="outputTitle">End Time</div> {{localEvent.end_time}}</h3>
+    <h3><div class="outputTitle">Venue</div> {{localEvent.venue}}</h3>
+    <h3><div class="outputTitle">URL</div> {{localEvent.url}}</h3>
 
-   <p><iframe id="map" width="100%" height="500px" v-bind:src="src()"></iframe></p>
+   <!-- <p><iframe id="map" width="100%" height="500px" v-bind:src="src()"></iframe></p> -->
+
+    <div id='map' style='width: 100%; height: 500px;'></div>
+
   </div>
 
 </template>
@@ -29,11 +44,24 @@
 import axios from "axios";
 
 export default {
+ mounted: function() {
+    mapboxgl.accessToken = `${process.env.VUE_APP_MAPBOX_ACCESS_TOKEN}`;
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v11',
+      center: [-79.4512, 43.6568],
+      zoom: 13
+    });
+       
+    map.addControl(new MapboxDirections({
+      accessToken: mapboxgl.accessToken
+    }), 'top-left');
+  },
   data: function() {
     return {
       message: "Find a local event near you!",
       localEvent: [],
-      url: `http://www.google.com/maps/embed/v1/directions?key=${process.env.VUE_APP_GOOGLE_API_KEY}`
+      // url: `http://www.google.com/maps/embed/v1/directions?key=${process.env.VUE_APP_GOOGLE_API_KEY}`
     };
   },
   created: function() {
@@ -46,9 +74,9 @@ export default {
         this.localEvent = response.data;
       });
     },
-    src: function() { 
-      return this.url + "&origin=" + this.address + "&destination=" + this.localEvent.venue;
-    }
+    // src: function() { 
+    //   return this.url + "&origin=" + this.address + "&destination=" + this.localEvent.venue;
+    // }
   }
 };
 </script>
