@@ -19348,7 +19348,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 select {
-    width: 40px;
+    width: 15px;
     height: 40px;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .3);
     border: 1px solid #e2e2e2;

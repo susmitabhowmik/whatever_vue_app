@@ -27,7 +27,7 @@
     <h3><div class="outputTitle">Start Time</div> {{localEvent.start_time}}</h3>
     <h3><div class="outputTitle">End Time</div> {{localEvent.end_time}}</h3>
     <h3><div class="outputTitle">Venue</div> {{localEvent.venue}}</h3>
-    <h3><div class="outputTitle">URL</div> {{localEvent.url}}</h3>
+    <h3><div class="outputTitle">URL</div> <a v-bind:href="`${localEvent.url}`">{{localEvent.url}}</a></h3>
 
    <!-- <p><iframe id="map" width="100%" height="500px" v-bind:src="src()"></iframe></p> -->
 

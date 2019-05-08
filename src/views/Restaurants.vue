@@ -17,35 +17,37 @@
     </div> 
     <div class="col-md-6"> <div class="b-slide-menu__form__row__item"><input type="text" placeholder="Cuisine" v-model="cuisine" /></div></div> </div>
     
-    <div class="b-slide-menu__form__row row">
-    <div class="col-md-3"><span class="b-slide-menu__form__row__title"><h4>Minimum price:</h4></span>
-    </div> 
+    <div id="toggle">
+      <div class="b-slide-menu__form__row row">
+      <div class="col-md-3"><span class="b-slide-menu__form__row__title"><h4>Minimum price (optional):</h4></span>
+      </div> 
 
 
-    <div class="col-md-6"> <div >
-      <select v-model="min_price" data-placeholder="Minimum Price" style="background-color: white" tabindex="2" >
-      <option value="1">💲</option>
-      <option value="2">💲💲</option>
-      <option value="3">💲💲💲</option>
-      <option value="4">💲💲💲💲</option>
-    </select>
-    </div> </div> </div>
+      <div class="col-md-6"> <div >
+        <select v-model="min_price" data-placeholder="Minimum Price" style="background-color: white" tabindex="2" >
+        <option value="1">💲</option>
+        <option value="2">💲💲</option>
+        <option value="3">💲💲💲</option>
+        <option value="4">💲💲💲💲</option>
+      </select>
+      </div> </div> </div>
 
-    <div class="b-slide-menu__form__row row">
-    <div class="col-md-3"><span class="b-slide-menu__form__row__title"><h4>Maximum price:</h4></span>
-    </div> 
+      <div class="b-slide-menu__form__row row">
+      <div class="col-md-3"><span class="b-slide-menu__form__row__title"><h4>Maximum price (optional):</h4></span>
+      </div> 
 
-    <div class="col-md-6"> <div>
-      <select v-model="max_price" data-placeholder="Maximum Price" tabindex="2">
-      <option value="1">💲</option>
-      <option value="2">💲💲</option>
-      <option value="3">💲💲💲</option>
-      <option value="4">💲💲💲💲</option>
-    </select>
+      <div class="col-md-6"> <div>
+        <select v-model="max_price" data-placeholder="Maximum Price" tabindex="2">
+        <option value="1">💲</option>
+        <option value="2">💲💲</option>
+        <option value="3">💲💲💲</option>
+        <option value="4">💲💲💲💲</option>
+      </select>
 
 
-    </div></div></div>
+      </div></div></div>
 
+  </div></div></template>
 <!--     <button v-on:clcick ="toggleParams()">Refine Search</button> 
     
   <p>Please enter a minimum price: <input type="text" v-model="minprice" /></p>
@@ -107,7 +109,6 @@ export default {
     // src: function() { 
     //   return this.url + "&origin=" + this.address + "&destination=" + this.restaurant.address;
     // },
-
   }
 };
 </script>

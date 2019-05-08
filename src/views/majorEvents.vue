@@ -29,7 +29,7 @@
     <h3><div class="outputTitle"> Venue</div> {{majorEvent.venue}}</h3>
    <!--  <p>Minimum Price: ${{majorEvent.minPrice}}</p>
     <p>Maximum Price: ${{majorEvent.maxPrice}}</p> -->
-    <h3><div class="outputTitle">URL</div> {{majorEvent.url}}</h3>
+    <h3><div class="outputTitle">URL</div> <a v-bind:href="`${majorEvent.url}`">{{majorEvent.url}} </a></h3>
     <!-- <p><iframe id="map" width="100%" height="500px" v-bind:src="src()"></iframe></p> -->
      <div id='map' style='width: 100%; height: 500px;'></div>
 
