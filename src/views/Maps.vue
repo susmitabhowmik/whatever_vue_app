@@ -6,36 +6,10 @@
 </template>
 
 <style>
- body {
+ /*body {
    margin: 0;
    padding: 0;
- }
-    
- #mapbox{
-   position: absolute;
-   top: 0; 
-   bottom: 0; 
-   width: 100%;
-   height: 500px;
- }
- #instructions {
-  height: 400px;
-  position: relative;
-  margin: 20px;
-  width: 25%;
-  top: 50%;
-  bottom: 20%;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.9);
-  overflow-y: scroll;
-  font-family: sans-serif;
-  font-size: 0.8em;
-  line-height: 2em;
-}
-
-.duration {
-  font-size: 2em;
-}
+ }*/
 </style>
 
 <script>
