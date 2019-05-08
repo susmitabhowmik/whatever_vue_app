@@ -19345,4 +19345,13 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .outputTitle{
-text-decoration: underline;}
+}
+
+select {
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .3);
+    border: 1px solid #e2e2e2;
+    background: #ffffff;
+    top: 22px;"
+}
