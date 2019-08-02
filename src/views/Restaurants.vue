@@ -2,27 +2,27 @@
   <div class="restaurants">
   <div class="text">
     <h1>{{ message }}</h1>
-    <p>Please enter your address: <input type="text" v-model="address" /></p>
-    <p>Please enter a radius (miles): <input type="text" v-model="radius" /></p>
-    <p>Please enter a cusine: <input type="text" v-model="cuisine" /></p>
+    <h6>Please enter your address: <input type="text" v-model="address" /></h6>
+    <h6>Please enter a radius (miles): <input type="text" v-model="radius" /></h6>
+    <h6>Please enter a cusine: <input type="text" v-model="cuisine" /></h6>
 <!--     <button v-on:clcick ="toggleParams()">Refine Search</button> 
- -->   <p> Min Price(optional):
+ -->   <h6> Minimum Price (optional):
        <select v-model="min_price" data-placeholder="Minimum Price" style="background-color: white" tabindex="2" >
         <option value="1">💲</option>
         <option value="2">💲💲</option>
         <option value="3">💲💲💲</option>
         <option value="4">💲💲💲💲</option>
-        </select> </p>
-        <p>Maximum price (optional):
-        <select v-model="max_price" data-placeholder="Maximum Price" tabindex="2">
+        </select> </h6>
+        <h6>Maximum price (optional):
+        <select v-model="max_price" style="background-color: white" data-placeholder="Maximum Price" tabindex="2">
         <option value="1">💲</option>
         <option value="2">💲💲</option>
         <option value="3">💲💲💲</option>
         <option value="4">💲💲💲💲</option>
-        </select> </p>
-      <p><button v-on:click="addParams()"> Go! </button></p>
-      <p>Name: {{restaurant.name}}</p>
-      <p>Address: {{restaurant.address}}</p>
+        </select> </h6>
+      <p><button type="button" class="btn btn-secondary" v-on:click="addParams()"> Go! </button></p>
+      <h6>Name: {{restaurant.name}}</h6>
+      <h6>Address: {{restaurant.address}}</h6>
     </div>  
       <div id='map'></div> 
     </div>
@@ -41,7 +41,7 @@
   #map {
    position: absolute; 
    width: 100%;
-   height: 500px;
+   height: 700px;
   }
 
 </style>

@@ -2,19 +2,19 @@
   <div class="majorEvents">
     <div class="text">
       <h1>{{ message }}</h1>
-      <p>Please enter your address: <input type="text" v-model="address" /></p>
-      <p>Please enter a radius (miles): <input type="text" v-model="radius" /></p>
-      <p>Please enter a start date: <input type="dateTime-local" v-model="start_date" /></p>
-      <p>Please enter an end date: <input type="dateTime-local" v-model="end_date" /></p>
+      <h6>Please enter your address: <input type="text" v-model="address" /></h6>
+      <h6>Please enter a radius (miles): <input type="text" v-model="radius" /></h6>
+      <h6>Please enter a start date: <input type="dateTime-local" v-model="start_date" /></h6>
+      <h6>Please enter an end date: <input type="dateTime-local" v-model="end_date" /></h6>
 
 <!--     <button v-on:clcick ="toggleParams()">Refine Search</button> 
- -->  <p><button v-on:click="addParams()"> Go! </button></p>
-      <p>Name: {{majorEvent.name}}</p>
-      <p>Date/Time {{majorEvent.dateTime}}</p>
-      <p>Address: {{majorEvent.address}}</p>
-      <p>Venue: {{majorEvent.venue}}</p>
-      <p>Price Range: {{majorEvent.priceRange}}</p>
-      <p>URL: {{majorEvent.url}}</p>
+ -->  <p><button type="button" class="btn btn-secondary" v-on:click="addParams()"> Go! </button></p>
+      <h6>Name: {{majorEvent.name}}</h6>
+      <h6>Date/Time {{majorEvent.dateTime}}</h6>
+      <h6>Address: {{majorEvent.address}}</h6>
+      <h6>Venue: {{majorEvent.venue}}</h6>
+      <h6>Price Range: {{majorEvent.priceRange}}</h6>
+      <h6>URL: <a v-bind:href="`${majorEvent.url}`">{{majorEvent.url}}</a></h6>
     </div>
     <div id='map'></div> 
   </div>
@@ -26,13 +26,16 @@
     padding: 0;
 
   }
+  h6 {
+    margin: 15px;
+  }
   .text {
     text-align: center;
   }
   #map {
    position: absolute; 
    width: 100%;
-   height: 500px;
+   height: 700px;
   }
 </style>
 
