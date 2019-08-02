@@ -14,7 +14,7 @@ export default {
     return {
       origin: "Empire State Building",
       destination: "Freedom Tower",
-      url: `http://www.google.com/maps/embed/v1/directions?key=${api_key}`
+      url: `https://www.google.com/maps/embed/v1/directions?key=${api_key}`
     };
   },
   created: function() {},
