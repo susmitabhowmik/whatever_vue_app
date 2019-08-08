@@ -10,10 +10,10 @@
 <!--     <button v-on:clcick ="toggleParams()">Refine Search</button> 
  -->  <p><button type="button" class="btn btn-secondary" v-on:click="addParams()"> Go! </button></p>
       <h6>Name: {{majorEvent.name}}</h6>
-      <h6>Date/Time {{majorEvent.dateTime}}</h6>
+      <h6>Date/Time: {{majorEvent.localDate}} {{majorEvent.localTime}}</h6>
       <h6>Address: {{majorEvent.address}}</h6>
       <h6>Venue: {{majorEvent.venue}}</h6>
-      <h6>Price Range: {{majorEvent.priceRange}}</h6>
+      <h6>Price Range: {{majorEvent.minPrice}} - {{majorEvent.maxPrice}} USD</h6>
       <h6>URL: <a v-bind:href="`${majorEvent.url}`">{{majorEvent.url}}</a></h6>
     </div>
     <div id='map'></div> 
