@@ -3,7 +3,7 @@
     <h1>{{message}}</h1>
     <h5>See and visit interesting places. Share experiences with your friends.</h5>
     <button type="button" class="btn btn-light"><router-link style="color: black;" class="nav-link" to="/restaurants">Restaurants</router-link> </button>  
-    <button type="button" class="btn btn-light"><router-link style="color:black" class="nav-link" to="/localEvents">Find me a local event</router-link> </button>
+    <button type="button" class="btn btn-light"><router-link style="color:black;" class="nav-link" to="/localEvents">Find me a local event</router-link> </button>
     <button type="button" class="btn btn-light"><router-link style="color:black" class="nav-link" to="/majorEvents" color="black">Find me a major event</router-link> </button>
   </div>
 </template>
@@ -18,7 +18,7 @@
       padding: 0;
     }
     button {
-      margin: 5px;
+      margin: 10px;
     }
     #home {
       text-align:center;
