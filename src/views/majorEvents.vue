@@ -2,19 +2,19 @@
   <div class="majorEvents">
     <div class="text">
       <h1>{{ message }}</h1>
-      <h6>Please enter your address: <input type="text" v-model="address" /></h6>
-      <h6>Please enter a radius (miles): <input type="text" v-model="radius" /></h6>
-      <h6>Please enter a start date: <input type="dateTime-local" v-model="start_date" /></h6>
-      <h6>Please enter an end date: <input type="dateTime-local" v-model="end_date" /></h6>
+      <h6 style="margin: 15px;">Please enter your address: <input type="text" v-model="address" /></h6>
+      <h6 style="margin: 15px;">Please enter a radius (miles): <input type="text" v-model="radius" /></h6>
+      <h6 style="margin: 15px;">Please enter a start date: <input type="dateTime-local" v-model="start_date" /></h6>
+      <h6 style="margin: 15px;">Please enter an end date: <input type="dateTime-local" v-model="end_date" /></h6>
 
 <!--     <button v-on:clcick ="toggleParams()">Refine Search</button> 
- -->  <p><button type="button" class="btn btn-secondary" v-on:click="addParams()"> Go! </button></p>
-      <h6>Name: {{majorEvent.name}}</h6>
-      <h6>Date/Time: {{majorEvent.localDate}} {{majorEvent.localTime}}</h6>
-      <h6>Address: {{majorEvent.address}}</h6>
-      <h6>Venue: {{majorEvent.venue}}</h6>
-      <h6>Price Range: {{majorEvent.minPrice}} - {{majorEvent.maxPrice}} USD</h6>
-      <h6>URL: <a v-bind:href="`${majorEvent.url}`">{{majorEvent.url}}</a></h6>
+ -->  <p style="margin: 15px;"><button type="button" class="btn btn-secondary" v-on:click="addParams()"> Go! </button></p>
+      <h6 style="margin: 15px;">Name: {{majorEvent.name}}</h6>
+      <h6 style="margin: 15px;">Date/Time: {{majorEvent.localDate}} {{majorEvent.localTime}}</h6>
+      <h6 style="margin: 15px;">Address: {{majorEvent.address}}</h6>
+      <h6 style="margin: 15px;">Venue: {{majorEvent.venue}}</h6>
+      <h6 style="margin: 15px;">Price Range: {{majorEvent.minPrice}} - {{majorEvent.maxPrice}} USD</h6>
+      <h6 style="margin: 15px;">URL: <a v-bind:href="`${majorEvent.url}`">{{majorEvent.url}}</a></h6>
     </div>
     <div id='map'></div> 
   </div>
@@ -58,7 +58,7 @@ export default {
   },
   data: function() {
     return {
-      message: "Find a major event near you!",
+      message: "Find an Event",
       majorEvent: [],
     };
   },

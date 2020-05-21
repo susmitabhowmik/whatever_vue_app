@@ -2,7 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/Home.vue';
 import Restaurants from './views/Restaurants.vue';
-import majorEvents from './views/majorEvents.vue';
+import Events from './views/majorEvents.vue';
 import localEvents from './views/localEvents';
 import maps from './views/Maps';
 
@@ -23,9 +23,9 @@ export default new Router({
       component: Restaurants
     },
     {
-      path: '/majorEvents',
+      path: '/events',
       name: 'majorEvents',
-      component: majorEvents
+      component: Events
     },
     {
       path: '/localEvents',

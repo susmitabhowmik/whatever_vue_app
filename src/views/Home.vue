@@ -2,9 +2,8 @@
   <div id="home">
     <h1>{{message}}</h1>
     <h5>See and visit interesting places. Share experiences with your friends.</h5>
-    <button type="button" class="btn btn-light"><router-link style="color: black;" class="nav-link" to="/restaurants">Restaurants</router-link> </button>  
-    <button type="button" class="btn btn-light"><router-link style="color:black;" class="nav-link" to="/localEvents">Find me a local event</router-link> </button>
-    <button type="button" class="btn btn-light"><router-link style="color:black" class="nav-link" to="/majorEvents" color="black">Find me a major event</router-link> </button>
+    <button type="button" style="margin: 10px" class="btn btn-light"><router-link style="color: black;" class="nav-link" to="/restaurants">Restaurants</router-link> </button>  
+    <button type="button" style="margin: 10px" class="btn btn-light"><router-link style="color:black" class="nav-link" to="/majorEvents" color="black">Events</router-link> </button>
   </div>
 </template>
 
@@ -16,9 +15,6 @@
       width: 100%;
       margin:0;
       padding: 0;
-    }
-    button {
-      margin: 10px;
     }
     #home {
       text-align:center;

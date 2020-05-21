@@ -12,10 +12,7 @@
         <router-link class="nav-link" to="/restaurants">Restaurants</router-link> 
       </li>
       <li class="nav-item active">
-        <router-link class="nav-link" to="/localEvents">Local Events</router-link>
-      </li>
-      <li class="nav-item active">
-        <router-link class="nav-link" to="/majorEvents">Major Events</router-link> 
+        <router-link class="nav-link" to="/events">Events</router-link> 
       </li>
     </ul>
   </div>
